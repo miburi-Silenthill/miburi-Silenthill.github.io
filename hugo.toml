@@ -1,0 +1,11 @@
+baseURL = "https://miburi-silenthill.github.io/"
+languageCode = "ja"
+title = "縺ｿ縺ｶ繧翫・繝悶Ο繧ｰ"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+
+[permalinks]
+  posts = "/posts/:slug/"
+[pagination]
+  pagerSize = 10
