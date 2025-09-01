@@ -1,11 +1,18 @@
 baseURL = "https://miburi-silenthill.github.io/"
 languageCode = "ja"
-title = "縺ｿ縺ｶ繧翫・繝悶Ο繧ｰ"
+title = "みぶりのブログ"
 theme = "PaperMod"
-
 enableRobotsTXT = true
 
 [permalinks]
   posts = "/posts/:slug/"
+
 [pagination]
   pagerSize = 10
+
+[params]
+  defaultTheme = "auto"   # ダーク/ライト自動
+  [params.homeInfoParams]
+    Title = "私の数学ブログ"
+    Content = "ようこそ！ここに勉強法をまとめていきます。Example ページを読む"
+
