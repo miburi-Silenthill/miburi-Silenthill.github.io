@@ -1,3 +1,3 @@
 /* 段落間の余白を広げる（PaperMod） */
-.post-content > p { margin-block-end: 1.6em; line-height: 1.85; }
+.post-content > p { margin-block-end: 2.5em; line-height: 1.85; }
 .post-content > p:last-child { margin-block-end: 0; }
