@@ -10,9 +10,57 @@ enableRobotsTXT = true
 [pagination]
   pagerSize = 10
 
+# 追加：検索と数式，コードハイライト，OG画像など
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  category = "categories"
+  tag      = "tags"
+
+[menu]
+  [[menu.main]]
+    identifier = "search"
+    name = "検索"
+    url = "/search/"
+    weight = 5
+
+  [[menu.main]]
+    identifier = "categories"
+    name = "カテゴリー"
+    url = "/categories/"
+    weight = 3
+
+
 [params]
-  defaultTheme = "auto"   # ダーク/ライト自動
+  defaultTheme = "auto"
+  ShowBreadCrumbs = true
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowShareButtons = true
+  ShowToc = true
+  TocOpen = false
+  images = ["images/og-default.png"]  # 用意できたら置く
+
+  # 一覧にカバー画像を出すなら
+  ShowCover = true
+  cover = { linkFullImages = true, responsiveImages = true }
+
+  # Fuse.js 検索の精度
+  fuseOpts = { minMatchCharLength = 2, threshold = 0.3 }
+
   [params.homeInfoParams]
     Title = "私の数学ブログ"
-    Content = "ようこそ！ここに勉強法をまとめていきます。Example ページを読む"
+    # “Example ページ”にリンクしたい場合は Markdown を使う
+    Content = "ようこそ！ここに勉強法をまとめていきます．[Example ページを読む](/posts/example/)"
+
+# Goldmark で生 HTML を許可（KaTeX など）
+[markup.goldmark.renderer]
+  unsafe = true
+
+# Chroma（コードハイライト）
+[markup.highlight]
+  noClasses = false
+  style = "github"
+  lineNos = true
 
