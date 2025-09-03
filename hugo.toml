@@ -18,6 +18,20 @@ enableRobotsTXT = true
   category = "categories"
   tag      = "tags"
 
+[menu]
+  [[menu.main]]
+    identifier = "search"
+    name = "検索"
+    url = "/search/"
+    weight = 5
+
+  [[menu.main]]
+    identifier = "categories"
+    name = "カテゴリー"
+    url = "/categories/"
+    weight = 3
+
+
 [params]
   defaultTheme = "auto"
   ShowBreadCrumbs = true
